@@ -52,18 +52,18 @@ BUBBLE-SORT-FUNCTIONAL
   (format t "~a~%" (equal (bubble-sort-functional '(1 2 3 4 5)) '(1 2 3 4 5)))
   (format t "Test 3: bubble-sort-functional (empty list) ~%")
   (format t "~a~%" (equal (bubble-sort-functional '()) '())))
-RUN-REMOVE-SECONDS-AND-THIRDS-TESTS
+RUN-BUBBLE-SORT-FUNCTIONAL-TESTS
 ```
 
 ## Тестування функціонального варіанту
 
 ```lisp
 [4]> (run-bubble-sort-functional-tests)
-Test 1: remove-seconds-and-thirds
+Test 1: bubble-sort-functional
 T
-Test 2: remove-seconds-and-thirds
+Test 2: bubble-sort-functional
 T
-Test 3: remove-seconds-and-thirds (empty list)
+Test 3: bubble-sort-functional (empty list)
 T
 NIL
 ```
@@ -95,7 +95,7 @@ BUBBLE-SORT-IMPERATIVE
   (format t "~a~%" (equal (bubble-sort-imperative '(1 2 3 4 5)) '(1 2 3 4 5)))
   (format t "Test 3: bubble-sort-imperative (empty list) ~%")
   (format t "~a~%" (equal (bubble-sort-imperative '()) '())))
-RUN-LIST-SET-INTERSECTION-TESTS
+RUN-BUBBLE-SORT-IMPERATIVE-TESTS
 ```
 
 ## Тестування імперативного варіанту
