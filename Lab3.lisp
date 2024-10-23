@@ -1,7 +1,6 @@
 ;1 task
 
 (defun swap-adjacent (list)
-
   (cond
     ((null list) nil)
     ((null (cdr list)) list)
