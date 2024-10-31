@@ -4,15 +4,15 @@
   (cond
     ((null list) nil)
     ((null (cdr list)) list)
-    ((> (car list) (cadr list))       
-      (cons (cadr list) (cons (car list) (swap-adjacent (cddr list)))))
+    ((> (car list) (cadr list))  
+     (cons (cadr list) (cons (car list) (swap-adjacent (cddr list)))))
     (t
      (cons (car list) (swap-adjacent (cdr list))))))
 
-
 (defun bubble-sort-functional (list)
   (let ((swapped-list (swap-adjacent list)))
-    (if (equal swapped-list list)         
+    (if (equal swapped-list list)  
+        list
       (bubble-sort-functional swapped-list))))
 
 
