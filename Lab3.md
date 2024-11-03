@@ -73,17 +73,15 @@ NIL
 
 ```lisp
 ;2-nd task
-[5]> (defun bubble-sort-imperative (list)
-    (let ((copy (copy-list list)))  
-       (do ((swapped t)
-         (n (length copy)))
-        ((not swapped))  
-      (setf swapped nil)
-      (dotimes (i (1- n))
-        (when (> (nth i copy) (nth (1+ i) copy))  
-          (rotatef (nth i copy) (nth (1+ i) copy)) 
-          (setf swapped t))))
-     copy)) 
+[5]> (defun bubble-sort-imperative (lst)
+  (dotimes (i (1- (length lst)))
+    (dotimes (j (- (length lst) i 1))
+      (let ((current (nth j lst))
+            (next (nth (1+ j) lst)))
+        (when (> current next)
+          (setf (nth j lst) next)
+          (setf (nth (1+ j) lst) current)))))
+  lst)
 BUBBLE-SORT-IMPERATIVE
 ```
 
