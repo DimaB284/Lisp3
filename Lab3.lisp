@@ -2,7 +2,6 @@
 
 (defun swap-adjacent (list)
   (cond
-    ((null list) nil)
     ((null (cdr list)) list)
     ((> (car list) (cadr list))  
      (cons (cadr list) (swap-adjacent (cons (car list) (cddr list)))))
@@ -32,6 +31,7 @@
 ;2 task
 
 (defun bubble-sort-imperative (lst)
+  (copy-list lst)
   (dotimes (i (1- (length lst)))
     (dotimes (j (- (length lst) i 1))
       (let ((current (nth j lst))
