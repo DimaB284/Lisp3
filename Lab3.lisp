@@ -5,7 +5,7 @@
     ((null list) nil)
     ((null (cdr list)) list)
     ((> (car list) (cadr list))  
-     (cons (cadr list) (cons (car list) (swap-adjacent (cddr list)))))
+     (cons (cadr list) (swap-adjacent (cons (car list) (cddr list)))))
     (t
      (cons (car list) (swap-adjacent (cdr list))))))
 
